@@ -1,0 +1,24 @@
+# Exported from 3D Builder
+
+newmtl FrontColor_0
+Kd 1.000000 1.000000 1.000000
+
+newmtl Mat_0
+Kd 1.000000 1.000000 1.000000
+map_Kd Wood_Floor_Parquet.jpg
+
+newmtl Mat_1
+Kd 1.000000 1.000000 1.000000
+map_Kd Wood_Floor_Light.jpg
+
+newmtl Mat_2
+Kd 1.000000 1.000000 1.000000
+map_Kd Roofing_Shingles_GAF_Estates.jpg
+
+newmtl Mat_3
+Kd 1.000000 1.000000 1.000000
+map_Kd Wood_Cherry_Original.jpg
+
+newmtl Mat_4
+Kd 1.000000 1.000000 1.000000
+map_Kd Metal_Aluminum_Anodized.jpg

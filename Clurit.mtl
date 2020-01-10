@@ -1,0 +1,16 @@
+# Exported from 3D Builder
+
+newmtl FrontColor_0
+Kd 1.000000 1.000000 1.000000
+
+newmtl Mat_0
+Kd 1.000000 1.000000 1.000000
+map_Kd CluritDam.jpg
+
+newmtl Mat_1
+Kd 1.000000 1.000000 1.000000
+map_Kd Foto0149_1.png
+
+newmtl Mat_2
+Kd 1.000000 1.000000 1.000000
+map_Kd metal_29.jpg

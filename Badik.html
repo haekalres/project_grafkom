@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Badik</title>
+	<style>
+	html, body {
+        margin: 0;
+        height: 100%;
+    }
+    #c {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+	</style>
+</head>
+<body>
+	<canvas id="c"></canvas>
+</body>
+
+	<script type= "module">
+		import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r110/build/three.module.js';
+import {OrbitControls} from 'https://threejsfundamentals.org/threejs/resources/threejs/r110/examples/jsm/controls/OrbitControls.js';
+import {OBJLoader2} from 'https://threejsfundamentals.org/threejs/resources/threejs/r110/examples/jsm/loaders/OBJLoader2.js';
+import {MTLLoader} from 'https://threejsfundamentals.org/threejs/resources/threejs/r110/examples/jsm/loaders/MTLLoader.js';
+import {MtlObjBridge} from 'https://threejsfundamentals.org/threejs/resources/threejs/r110/examples/jsm/loaders/obj2/bridge/MtlObjBridge.js';
+
+function main() {
+  const canvas = document.querySelector('#c');
+  const renderer = new THREE.WebGLRenderer({canvas});
+
+  const fov = 45;
+  const aspect = 2;  // the canvas default
+  const near = 0.1;
+  const far = 100;
+  const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+  camera.position.set(0, 10, 20);
+
+  const controls = new OrbitControls(camera, canvas);
+  controls.target.set(0, 5, 0);
+  controls.update();
+
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color('skyblue');
+
+  {
+    const planeSize = 40;
+
+    const loader = new THREE.TextureLoader();
+    const texture = loader.load('https://threejsfundamentals.org/threejs/resources/images/checker.png');
+    texture.wrapS = THREE.RepeatWrapping;
+    texture.wrapT = THREE.RepeatWrapping;
+    texture.magFilter = THREE.NearestFilter;
+    const repeats = planeSize / 2;
+    texture.repeat.set(repeats, repeats);
+
+    const planeGeo = new THREE.PlaneBufferGeometry(planeSize, planeSize);
+    const planeMat = new THREE.MeshPhongMaterial({
+      map: texture,
+      side: THREE.DoubleSide,
+    });
+    const mesh = new THREE.Mesh(planeGeo, planeMat);
+    mesh.rotation.x = Math.PI * -.5;
+    scene.add(mesh);
+  }
+
+  {
+    const skyColor = 0xFFF5EE;  // light blue
+    const groundColor = 0xDDA0DD;  // brownish orange
+    const intensity = 1;
+    const light = new THREE.HemisphereLight(skyColor, groundColor, intensity);
+    scene.add(light);
+  }
+
+  {
+    const color = 0xFFFFFF;
+    const intensity = 1;
+    const light = new THREE.DirectionalLight(color, intensity);
+    light.position.set(5, 10, 2);
+    scene.add(light);
+    scene.add(light.target);
+  }
+
+  {
+
+  /*const mtlLoader = new MTLLoader();
+
+    mtlLoader.load('keris+bagus+lah.mtl', (mtlParseResult) => {
+      const objLoader = new OBJLoader2();
+      const materials =  MtlObjBridge.addMaterialsFromMtlLoader(mtlParseResult);
+    
+      objLoader.addMaterials(materials);
+      objLoader.load('keris+bagus+lah.obj', (root) => {
+          scene.add(root);
+          // ngatur posisi (kirikanan, atasbawah, depan belakang); 
+          root.position.set(-10,12,2);
+          root.rotation.x = 90 *Math.PI/180;
+          // ngatur ukuran
+           root.scale.set(0.7,0.7,0.7);
+         });
+  });
+
+	const mtlLoader4 = new MTLLoader();
+
+    mtlLoader4.load('karanbit.mtl', (mtlParseResult) => {
+      const objLoader4 = new OBJLoader2();
+      const materials =  MtlObjBridge.addMaterialsFromMtlLoader(mtlParseResult);
+    
+      objLoader4.addMaterials(materials);
+      objLoader4.load('karanbit.obj', (cro) => {
+          scene.add(cro);
+          cro.position.set(-5,5,2);
+          cro.rotation.x = 0 *Math.PI/180;
+           cro.scale.set(0.05,0.05,0.05);
+         });
+  });*/
+
+      const mtlLoader5 = new MTLLoader();
+
+    mtlLoader5.load('Badik1.mtl', (mtlParseResult) => {
+      const objLoader5 = new OBJLoader2();
+      const materials =  MtlObjBridge.addMaterialsFromMtlLoader(mtlParseResult);
+    
+      objLoader5.addMaterials(materials);
+      objLoader5.load('Badik1.obj', (cro) => {
+          scene.add(cro);
+          cro.position.set(-7,5,2);
+          cro.rotation.x = 100 *Math.PI/180;
+           cro.scale.set(0.05,0.05,0.05);
+         });
+  });
+
+    /*const mtlLoader6 = new MTLLoader();
+
+    mtlLoader6.load('Clurit.mtl', (mtlParseResult) => {
+      const objLoader6 = new OBJLoader2();
+      const materials =  MtlObjBridge.addMaterialsFromMtlLoader(mtlParseResult);
+    
+      objLoader6.addMaterials(materials);
+      objLoader6.load('Clurit.obj', (cro) => {
+          scene.add(cro);
+          cro.position.set(9,-2,2);
+          cro.rotation.x = 100 *Math.PI/180;
+          cro.rotation.y = 90 *Math.PI/180;
+           cro.scale.set(0.009,0.009,0.009);
+         });
+  });*/
+
+  }
+
+  function resizeRendererToDisplaySize(renderer) {
+    const canvas = renderer.domElement;
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
+    const needResize = canvas.width !== width || canvas.height !== height;
+    if (needResize) {
+      renderer.setSize(width, height, false);
+    }
+    return needResize;
+  }
+
+  function render() {
+
+    if (resizeRendererToDisplaySize(renderer)) {
+      const canvas = renderer.domElement;
+      camera.aspect = canvas.clientWidth / canvas.clientHeight;
+      camera.updateProjectionMatrix();
+    }
+
+    renderer.render(scene, camera);
+
+    requestAnimationFrame(render);
+  }
+
+  requestAnimationFrame(render);
+}
+
+main();
+	</script>
+
+
+</html>

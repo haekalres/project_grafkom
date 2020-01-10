@@ -1,0 +1,16 @@
+# Exported from 3D Builder
+
+newmtl _Translucent_Glass_Gray__copy1_0
+Kd 0.000000 0.000000 0.000000
+
+newmtl Mat_0
+Kd 1.000000 1.000000 1.000000
+map_Kd new_badik_pattimura_puncung_knife_java_keris_kriss_kris_jk15_4_lgw.jpg
+
+newmtl Mat_1
+Kd 1.000000 1.000000 1.000000
+map_Kd metal_29.jpg
+
+newmtl Mat_2
+Kd 1.000000 1.000000 1.000000
+map_Kd Foto0149_5.png

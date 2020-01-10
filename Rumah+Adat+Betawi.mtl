@@ -1,0 +1,75 @@
+# Exported from 3D Builder
+
+newmtl FrontColor_0
+Kd 0.890196 0.882353 0.870588
+
+newmtl M_0129_WhiteSmoke_0
+Kd 0.960784 0.960784 0.960784
+
+newmtl Color_C18_0
+Kd 0.400000 0.278431 0.156863
+
+newmtl Wood_Lumber_ButtJoined_0
+Kd 0.407843 0.239216 0.184314
+
+newmtl Metal_Aluminum_Anodized_0
+Kd 0.784314 0.819608 0.854902
+
+newmtl Outdoor_Fabric_0
+Kd 0.819608 0.784314 0.650980
+
+newmtl bu_teak_semi_gloss_0
+Kd 0.627451 0.458824 0.325490
+
+newmtl M_0010_Snow_0
+Kd 1.000000 0.980392 0.980392
+
+newmtl M_96_96_96_0
+Kd 0.376471 0.376471 0.376471
+
+newmtl M_0046_Gold_0
+Kd 1.000000 0.823529 0.509804
+
+newmtl Mat_0
+Kd 1.000000 1.000000 1.000000
+map_Kd Wood_Cherry_Original.jpg
+
+newmtl Mat_1
+Kd 1.000000 1.000000 1.000000
+map_Kd _Wood_Floor_Parquet_1.jpg
+
+newmtl Mat_2
+Kd 1.000000 1.000000 1.000000
+map_Kd _Wood_Cherry_Original_3.jpg
+
+newmtl Mat_3
+Kd 1.000000 1.000000 1.000000
+map_Kd _Wood_Lumber_ButtJoined_1.jpg
+
+newmtl Mat_4
+Kd 1.000000 1.000000 1.000000
+map_Kd Tile_Ceramic_Natural.jpg
+
+newmtl Mat_5
+Kd 1.000000 1.000000 1.000000
+map_Kd Roofing_Tile_Spanish.jpg
+
+newmtl Mat_6
+Kd 1.000000 1.000000 1.000000
+map_Kd Translucent_Glass_Tinted.jpg
+
+newmtl Mat_7
+Kd 1.000000 1.000000 1.000000
+map_Kd _Stone_Brushed_Khaki_1.jpg
+
+newmtl Mat_8
+Kd 1.000000 1.000000 1.000000
+map_Kd Metal_Brass_Ceiling.jpg
+
+newmtl Mat_9
+Kd 1.000000 1.000000 1.000000
+map_Kd Bapak_WR_Supratman_Reuni_Angkt83_20060601_4.jpg
+
+newmtl Mat_10
+Kd 1.000000 1.000000 1.000000
+map_Kd Translucent_Glass_Gold.jpg

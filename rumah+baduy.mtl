@@ -1,0 +1,17 @@
+# Exported from 3D Builder
+
+newmtl Wood_Bamboo_Medium_0_0
+Kd 0.694118 0.411765 0.168627
+
+newmtl FrontColor_0_0
+Kd 1.000000 1.000000 1.000000
+
+newmtl _6_0_0
+Kd 0.721569 0.572549 0.396078
+
+newmtl _3_0_0
+Kd 0.317647 0.321569 0.345098
+
+newmtl Mat_0
+Kd 1.000000 1.000000 1.000000
+map_Kd _4.jpg
